@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+
+  &__item {
+    text-transform: uppercase;
+    padding-left: var(--spacing-sm);
+    display: flex;
+
+    &:not(:last-child) {
+      padding-right: var(--spacing-sm);
+    }
+  }
+}

@@ -1,35 +1,44 @@
 - title: Music Directory
-  work: Concept, Design, Development
+  work: Concept, Design, Development - Design in collaboration with Moana Bischof & Julia Weiss
+  img: "/img/musicdirectory.png"
   url: musicdirectory.ch
 
 - title: Plattform Menschenhandel
-  work: Development
+  work: Development - Design by Moana Bischof
+  img: "/img/plattform.png"
   url: https://plattform-menschenhandel.ch/
 
 - title: Helvetiarockt
-  work: Concept, Development
-  url: helvetiarock.ch
+  work: Concept, Development - Design by Moana Bischof & Julia Weiss
+  img: "/img/helvetiarockt.png"
+  url: https://helvetiarock.ch
 
 - title: Konzerninitiative
   work: Concept, Design, Development
-  url: konzern-initiative.ch
+  img: "/img/konzerninitiative.png"
+  url: https://konzern-initiative.ch
 
 - title: Female Music Lab
-  work: Concept, Development
-  url: http://femalemusiclab.ch/
+  work: Concept, Development - Design by Moana Bischof & Julia Weiss
+  img: "/img/femalemusiclab.png"
+  url: https://femalemusiclab.ch/
 
 - title: Hauptstadt Genossenschaft
-  work: Planning, Design, Development
-  url: hauptstadt-genossenschaft.ch
+  work: Concept, Design, Development
+  img: "/img/genossenschaft.png"
+  url: https://hauptstadt-genossenschaft.ch
 
 - title: Sanspapiers Anlaufstelle Zürich
-  work: Planning, Design, Development
+  work: Concept, Design, Development
+  img: "/img/anlaufstelle.png"
   url: https://sans-papiers-zuerich.ch/
 
 - title: Gsoa
-  work: Planning, Design, Development
+  work: Concept, Design, Development
+  img: "/img/gsoa.png"
   url: https://www.gsoa.ch/
 
 - title: Wide Switzerland
-  work: Planning, Design, Development
+  work: Concept, Design, Development
+  img: "/img/wide.png"
   url: https://wide-switzerland.ch/

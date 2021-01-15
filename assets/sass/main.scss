@@ -1,8 +1,23 @@
-:root {
-  --bg-color: #000;
-  --text-color: #fff;
-  --font-system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@import 'node_modules/css-reset-and-normalize/scss/reset-and-normalize';
+@import "base/variables.scss";
+@import "base/typography.scss";
+
+@import "partials/header.scss";
+@import "partials/nav.scss";
+@import "partials/section.scss";
+@import "partials/intro.scss";
+@import "partials/client.scss";
+@import "partials/about.scss";
+@import "partials/quotes.scss";
+
+
+@import "partials/pointer.scss";
+@import "partials/scrollbar.scss";
+
+html {
+  scroll-behavior: smooth;
 }
+
 
 body {
   background-color: var(--bg-color);
@@ -11,4 +26,5 @@ body {
   font-family: neuzeit-grotesk, sans-serif;
   font-weight: 400;
   font-style: normal;
+  cursor: none;
 }

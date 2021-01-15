@@ -1,10 +1,25 @@
-<section>
-  <h2>Recent Work</h2>
+<section id="work">
+  <h2 class="section__title">Recent Work</h2>
+
+
   <ul>
     {{ range $.Site.Data.work }}
-      <li>
-        {{ .title }}
-        {{ .work }}
+      <li class="client">
+          <p class="client__name">{{ .title }}</p>
+
+          <div class="client__information">
+            <div class="client__text">
+              <p>{{ .title }}</p>
+              <p>[ {{ .work }} ]</p>
+
+              <a href="{{ .url }}">View Website</a>
+            </div>
+
+
+
+            {{ $image := resources.Get (.img)  }}
+            <img src="{{ $image.Permalink  }}" alt="Screenshot {{ .title }}" class ="client__screenshot">
+          </div>
       </li>
     {{ end }}
   </ul>

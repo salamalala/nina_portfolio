@@ -1,0 +1,5 @@
+baseURL: http://example.org/
+languageCode: en-en
+title: Nina Regli
+params:
+  subtitle: Webdesigner & Developer

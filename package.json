@@ -1,0 +1,23 @@
+{
+  "name": "website-nina-21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "css-reset-and-normalize": "^2.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salamalala/nina_portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salamalala/nina_portfolio/issues"
+  },
+  "homepage": "https://github.com/salamalala/nina_portfolio#readme"
+}

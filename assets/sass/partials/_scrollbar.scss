@@ -1,0 +1,27 @@
+// firefox: but not working ?!
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--white) var(--black);
+}
+
+// to avoid horizontal scrollbar:
+body {
+  overflow-x: hidden;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: var(--spacing-sm);
+}
+
+// make it thicker on  body
+body::-webkit-scrollbar {
+  width: var(--spacing-base);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--black);
+}
+*::-webkit-scrollbar-thumb:vertical {
+  background-color: var(--white);
+}

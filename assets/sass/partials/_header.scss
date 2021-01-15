@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title,
+  &__subtitle {
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+  }
+
+
+}

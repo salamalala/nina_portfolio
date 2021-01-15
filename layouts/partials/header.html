@@ -1,15 +1,25 @@
-<header>
+<header class="header">
+
 	<a href="">
-		<h1>{{ .Site.Title }}</h1>
-		<h2>Webdesigner & -Developer</h2>
+		<h1 class="header__title">{{ .Site.Title }}</h1>
+		<h2 class="header__subtitle">{{ $.Site.Params.subtitle }}</h2>
 	</a>
 
-	<nav>
-		<ul>
-			<li><a href="{{ .URL | relURL }}">Work</a></li>
-			<li><a href="{{ .URL | relURL }}">About</a></li>
-			<li><a href="{{ .URL | relURL }}">Quotes</a></li>
-			<li><a href="{{ .URL | relURL }}">Contact</a></li>
+	<nav class="header__nav">
+		<ul class="nav">
+			<li class="nav__item">
+				<a href="#work">Work</a>
+			</li>
+			<li class="nav__item">
+				<a href="#about">About</a>
+			</li>
+			<li class="nav__item">
+				<a href="#quotes">Quotes</a>
+			</li>
+			<li class="nav__item">
+				<a href="#contact">Contact</a>
+			</li>
 		</ul>
 	</nav>
+
 </header>

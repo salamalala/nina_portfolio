@@ -1,0 +1,32 @@
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+
+  --black: #000;
+  --white: #fff;
+
+  --spacing-xs: 0.563em;
+  --spacing-sm: 0.75em;
+  --spacing-base: 1em;
+  --spacing-md: 1.333em;
+  --spacing-lg: 1.777em;
+  --spacing-xl: 2.369em;
+  --spacing-xxl: 3.157em;
+
+
+}
+
+
+// Breakpoints
+/* ===== == = === 20em (320px) === = == ===== */
+$screen-xs: "(min-width: 20em)";
+/* ===== == = === 37.5em (600px) === = == ===== */
+$screen-sm: "(min-width: 37.5em)";
+/* ===== == = === 48em (768px) === = == ===== */
+$screen-md: "(min-width: 48em)";
+/* ===== == = === 68.75em (1100px) === = == ===== */
+$screen-lg: "(min-width: 68.75em)";
+/* ===== == = === 81.25em (1300px) === = == ===== */
+$screen-xl: "(min-width: 81.25em)";
+/* ===== == = === 112.5em (1800px) === = == ===== */
+$screen-xxl: "(min-width: 112.5em)";

@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ .Title }}</title>
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.subtitle }}<meta name="description" content="{{ . }}">{{ end }}
+
+
 
 	<link rel="stylesheet" href="https://use.typekit.net/wvo3pan.css">
 	{{ $style := resources.Get "/sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
@@ -13,8 +15,18 @@
 
 </head>
 <body>
+
+	<svg width="44" height="39" xmlns="http://www.w3.org/2000/svg" id="pointer">
+		<path d="M39.04 3.39L23.07 34.15 4.85 9.07z" fill="#FFF" stroke="#FFF" stroke-width="4.5" fill-rule="evenodd"/>
+	</svg>
+
+
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
+
+
+	{{- $transpiled := resources.Get "js/main.js" | babel  -}}
+	<script defer language="javascript" type="text/javascript"  src="{{ $transpiled.Permalink }}"></script>
 </body>
 </html>

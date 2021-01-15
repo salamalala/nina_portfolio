@@ -1,12 +1,21 @@
-<section>
-  <h2>Quotes</h2>
-  <ul>
-    {{ range $.Site.Data.quotes }}
-      <li>
-        {{ .quote }}
-        {{ .name }}
-        {{ .function }}
-      </li>
-    {{ end }}
-  </ul>
+<section id="quotes">
+  <h2 class="section__title">Quotes</h2>
+
+    <div class="quotes">
+      {{ range $.Site.Data.quotes }}
+      <blockquote class="quotes__item">
+        <p class="text-large">
+          {{ .quote }}
+        </p>
+
+        <p class="quotes__person">
+          <span>{{ .name }}</span>
+          <span>{{ .function }}</span>
+        </p>
+
+
+      </blockquote>
+      {{ end }}
+    </div>
+
 </section>
