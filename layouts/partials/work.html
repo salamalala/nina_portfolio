@@ -1,0 +1,11 @@
+<section>
+  <h2>Recent Work</h2>
+  <ul>
+    {{ range $.Site.Data.work }}
+      <li>
+        {{ .title }}
+        {{ .work }}
+      </li>
+    {{ end }}
+  </ul>
+</section>

@@ -1,0 +1,12 @@
+<section>
+  <h2>Quotes</h2>
+  <ul>
+    {{ range $.Site.Data.quotes }}
+      <li>
+        {{ .quote }}
+        {{ .name }}
+        {{ .function }}
+      </li>
+    {{ end }}
+  </ul>
+</section>
