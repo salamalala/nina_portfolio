@@ -9,10 +9,16 @@
 @import "partials/client.scss";
 @import "partials/about.scss";
 @import "partials/quotes.scss";
+@import "partials/contact.scss";
+@import "partials/footer.scss";
 
 
 @import "partials/pointer.scss";
 @import "partials/scrollbar.scss";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
