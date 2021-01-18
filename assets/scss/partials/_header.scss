@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
 
+  &__title {
+    font-family: "Habitas-Bold";
+    font-size: 2.69em;
+  }
+
   &__title,
   &__subtitle {
     text-transform: uppercase;

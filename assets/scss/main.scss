@@ -1,4 +1,8 @@
 @import 'node_modules/css-reset-and-normalize/scss/reset-and-normalize';
+
+@import "fonts/habitas-bold.scss";
+@import "fonts/habitas-medium.scss";
+
 @import "base/variables.scss";
 @import "base/typography.scss";
 
@@ -32,5 +36,11 @@ body {
   font-family: neuzeit-grotesk, sans-serif;
   font-weight: 400;
   font-style: normal;
+  cursor: none;
+  // pointer-events: none;
+  padding: var(--spacing-sm);
+}
+
+a, button {
   cursor: none;
 }

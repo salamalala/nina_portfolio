@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  font-family: "Habitas-Medium";
+
+  &__item {
+    text-transform: uppercase;
+    display: flex;
+
+    &:last-child {
+      .nav__link {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    padding: var(--spacing-sm);
+  }
+}

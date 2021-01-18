@@ -10,7 +10,7 @@
 
 
 	<link rel="stylesheet" href="https://use.typekit.net/wvo3pan.css">
-	{{ $style := resources.Get "/sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+	{{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 
 </head>
@@ -26,6 +26,9 @@
 	{{ partial "footer" . }}
 
 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
 	{{- $transpiled := resources.Get "js/main.js" | babel  -}}
 	<script defer language="javascript" type="text/javascript"  src="{{ $transpiled.Permalink }}"></script>
 </body>

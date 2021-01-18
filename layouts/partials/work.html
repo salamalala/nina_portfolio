@@ -3,23 +3,27 @@
 
 
   <ul>
+    {{ $.Scratch.Set "counter" 0 }}
     {{ range $.Site.Data.work }}
       <li class="client">
-          <p class="client__name">{{ .title }}</p>
 
-          <div class="client__information">
-            <div class="client__text">
-              <p>{{ .title }}</p>
-              <p>[ {{ .work }} ]</p>
+        {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
 
-              <a href="{{ .url }}">View Website</a>
-            </div>
+        <button type="button" name="button" aria-expanded="false"
+        aria-controls='section_{{$.Scratch.Get "counter"}}' data-index-number='{{$.Scratch.Get "counter"}}' class="client__name">{{ .title }}</button>
 
-
-
-            {{ $image := resources.Get (.img)  }}
-            <img src="{{ $image.Permalink  }}" alt="Screenshot {{ .title }}" class ="client__screenshot">
+        <div class="client__information hide" id='section_{{$.Scratch.Get "counter"}}'>
+          <div class="client__text">
+            <p>{{ .title }}</p>
+            <p>[ {{ .work }} ]</p>
+            <a href="{{ .url }}">View Website</a>
           </div>
+
+          {{ $image := resources.Get (.img)  }}
+          <img src="{{ $image.Permalink  }}" alt="Screenshot {{ .title }}" class ="client__screenshot">
+
+        </div>
+
       </li>
     {{ end }}
   </ul>

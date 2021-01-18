@@ -1,7 +1,7 @@
 .contact {
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 85vh;
   justify-content: center;
 
   &__msg {
@@ -29,8 +29,8 @@
   }
 
   &__socialLink {
-    height: var(--spacing-md);
-    width: var(--spacing-md);
+    height: var(--spacing-base);
+    width: var(--spacing-base);
     display: flex;
   }
 
