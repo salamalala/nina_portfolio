@@ -5,13 +5,17 @@
   --black: #000;
   --white: #fff;
 
-  --spacing-xs: 0.563em;
-  --spacing-sm: 0.75em;
-  --spacing-base: 1em;
-  --spacing-md: 1.333em;
-  --spacing-lg: 1.777em;
-  --spacing-xl: 2.369em;
-  --spacing-xxl: 3.157em;
+
+  --ratio: 1.333;
+  --base-size: 1em;
+
+  --spacing-xs: calc( var(--base-size) / (2 * var(--ratio) ) );
+  --spacing-sm: calc( var(--base-size) / var(--ratio) );
+  --spacing-base: var(--base-size);
+  --spacing-md: calc( var(--base-size) * (2 * var(--ratio) ) );
+  --spacing-lg: calc( var(--base-size) * (3 * var(--ratio) ) );
+  --spacing-xl: calc( var(--base-size) * (4 * var(--ratio) ) );
+  --spacing-xxl: calc( var(--base-size) * (45* var(--ratio) ) );
 
 
 }

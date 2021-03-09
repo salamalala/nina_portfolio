@@ -13,14 +13,24 @@
         aria-controls='section_{{$.Scratch.Get "counter"}}' data-index-number='{{$.Scratch.Get "counter"}}' class="client__name">{{ .title }}</button>
 
         <div class="client__information hide" id='section_{{$.Scratch.Get "counter"}}'>
-          <div class="client__text">
-            <p>{{ .title }}</p>
-            <p>[ {{ .work }} ]</p>
-            <a href="{{ .url }}">View Website</a>
+          <div class="client__textWrapper">
+            <!-- <h3 class="client__title">{{ .title }}</h3> -->
+            <p class="client__work">[ {{ .work }} ]</p>
+            <a href="{{ .url }}" class="client__url">View Website</a>
           </div>
 
-          {{ $image := resources.Get (.img)  }}
-          <img src="{{ $image.Permalink  }}" alt="Screenshot {{ .title }}" class ="client__screenshot">
+          <!-- {{ $image := resources.Get (.img)  }}
+          <img src="{{ $image.Permalink  }}" alt="Screenshot {{ .title }}" class ="client__screenshot"> -->
+
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              src="https://player.vimeo.com/video/520936080?autoplay=1&loop=1&autopause=0&muted=1"
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
+          </div>
+
+          <!-- <iframe src="https://player.vimeo.com/video/520936080?background=1" width="1366" height="674" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Scroll Capture 2021-03-08 at 21220 PM"></iframe> -->
 
         </div>
 
