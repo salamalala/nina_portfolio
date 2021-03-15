@@ -11,53 +11,57 @@ var cursor = function () {
 
 var clientAccordion = function() {
 
-  const clients = document.querySelectorAll('.client__name');
-  const clientInformations = document.querySelectorAll('.client__information');
+  const clients = document.querySelectorAll('.client');
+  let clientButtons = document.querySelectorAll('.client__button');
 
 
   clients.forEach(client => {
-      client.setAttribute('aria-expanded', false);
-      gsap.set(client, {scale: 0.6});
 
-      const expanded = client.getAttribute('aria-expanded');
+    let clientButton = client.querySelector('.client__button');
 
-      const number = client.dataset.indexNumber;
-      const associatedSection = document.getElementById(`section_${number}`);
+    gsap.set(clientButton, {scale: 0.6});
 
-      const wrapper = client.parentNode;
+    const expanded = clientButton.getAttribute('aria-expanded');
+    const number = clientButton.dataset.indexNumber;
+    let associatedSection = client.querySelector('.client__information');
+    const text = associatedSection.querySelector('.client__textWrapper');
 
-      const text = associatedSection.querySelector('.client__textWrapper');
-      const img = associatedSection.querySelector('.client__screenshot');
+    clientButton.addEventListener('click', (e) => {
 
+      // remove active and reset all the other client elements
+      clients.forEach(client => {
+        if (client !== e.target.parentNode) {
+          let clientButton = client.querySelector('.client__button');
+          let associatedSection = client.querySelector('.client__information');
 
-      client.addEventListener('click', () => {
+          client.classList.remove('active');
 
-        // add class too - to be able to toggle - aria cant be toggled.
-        client.classList.toggle('expanded');
+          clientButton.setAttribute('aria-expanded', false);
+          gsap.to(clientButton, {scale: 0.6, duration: 0.2});
 
-        if (client.classList.contains('expanded')) {
-          gsap.to(wrapper, {className:'+=client active'});
-
-          gsap.to(client, {scale: 1, duration: 0.2});
-          gsap.fromTo(text, {opacity: 0}, {opacity: 1, duration: 0.5});
-          gsap.fromTo(img, {opacity: 0, x: 500}, {opacity: 1, x:0, duration: 0.5});
-
-          client.setAttribute('aria-expanded', true);
-
-          associatedSection.classList.add("show");
-          associatedSection.classList.remove("hide");
-
-        } else {
-
-          client.setAttribute('aria-expanded', false);
-          wrapper.classList.remove('active');
-
-          gsap.to(client, {scale: 0.6, duration: 0.2});
           associatedSection.classList.add("hide");
-          associatedSection.classList.remove("show");
         }
       })
-    })
+
+      // give the clicked one the class active
+      client.classList.toggle('active');
+
+      if (client.classList.contains('active')) {
+        gsap.to(clientButton, {scale: 1, duration: 0.2});
+        gsap.fromTo(text, {opacity: 0}, {opacity: 1, duration: 0.5});
+
+        clientButton.setAttribute('aria-expanded', true);
+
+        associatedSection.classList.remove("hide");
+      } else {
+        clientButton.setAttribute('aria-expanded', false);
+
+        gsap.to(clientButton, {scale: 0.6, duration: 0.2});
+        associatedSection.classList.add("hide");
+      }
+
+    });
+  })
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -74,15 +78,12 @@ document.addEventListener('DOMContentLoaded', function() {
     clickToPlay: false,
     loop: {
       active: true
-    },
+    }
   });
 
   player.on('ready', () => {
     player.muted = true;
   });
-
-  window.player = player;
-
 
 
 

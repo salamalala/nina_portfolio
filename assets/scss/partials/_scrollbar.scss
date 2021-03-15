@@ -1,7 +1,7 @@
 // firefox: but not working ?!
 * {
   scrollbar-width: auto;
-  scrollbar-color: var(--white) var(--black);
+  scrollbar-color: var(--black) var(--white);
 }
 
 // to avoid horizontal scrollbar:
@@ -20,8 +20,8 @@ body::-webkit-scrollbar {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--black);
+  background: var(--white);
 }
 *::-webkit-scrollbar-thumb:vertical {
-  background-color: var(--white);
+  background-color: var(--black);
 }
