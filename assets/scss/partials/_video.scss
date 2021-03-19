@@ -1,14 +1,15 @@
 .video {
-  width: 30vw;
-  height: auto;
-  align-self: center;
-  border: solid var(--spacing-xs) var(--black);
+  border: solid black 4px;
+  padding-bottom: 15.25%;
+  height: 0;
+  width: 30%;
+  overflow: hidden;
+  position: relative;
 
-
-  .plyr__video-embed {
+  &__wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
+    padding-bottom: 200%;
+    transform: translateY(-36.95%);
   }
 
   iframe {

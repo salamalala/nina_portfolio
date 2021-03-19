@@ -29,7 +29,6 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.4/plyr.min.js"></script>
 
 	{{- $transpiled := resources.Get "js/main.js" | babel  -}}
 	<script defer language="javascript" type="text/javascript"  src="{{ $transpiled.Permalink }}"></script>
