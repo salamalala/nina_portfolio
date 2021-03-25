@@ -1,5 +1,6 @@
 body {
   font-size: 18px;
+  letter-spacing: var(--letter-spacing-base);
 
   @media #{$screen-lg} {
     font-size: 19px;
@@ -32,4 +33,13 @@ p {
 a {
   text-decoration: none;
   color: var(--text-color);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
 }

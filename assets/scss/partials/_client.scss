@@ -1,91 +1,129 @@
 .client {
+  // in order to have video positioned absolute;
+  position: relative;
   background-color: var(--white);
   color: var(--black);
   border: solid 2px var(--black);
-  padding: var(--spacing-base);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: var(--white);
-  transition: 0.5s all;
+  padding: var(--spacing-base) var(--spacing-md);
+  transition: 0.2s all;
 
   &.active {
+    padding-bottom: var(--spacing-md);
+
     &:first-child {
       background-color: #3535FF;
       color: var(--white);
+
+      .client__button {
+        color: var(--white);
+      }
     }
 
     &:nth-child(2) {
       background-color: #A4A03F;
-      color: var(--black);
     }
 
     &:nth-child(3) {
       background-color: #208776;
       color: var(--white);
+
+      .client__button {
+        color: var(--white);
+      }
     }
 
     &:nth-child(4) {
       background-color: #DDE300;
-      color: var(--black);
     }
 
     &:nth-child(5) {
       background-color: #E95C22;
-      color: var(--black);
     }
 
     &:nth-child(6) {
       background-color: #BDD24F;
-      color: var(--black);
     }
 
     &:nth-child(7) {
       background-color: #71C0B9;
-      color: var(--black);
     }
 
     &:nth-child(8) {
       background-color: #83A774;
-      color: var(--black);
     }
 
     &:nth-child(9) {
       background-color: #BA0C2F;
       color: var(--white);
+
+      .client__button {
+        color: var(--white);
+      }
     }
 
     &:nth-child(10) {
       background-color: #3A86A2;
       color: var(--white);
+
+      .client__button {
+        color: var(--white);
+      }
     }
   }
 
-
+  // title
   &__button {
     font-family: "Habitas-Medium";
     text-transform: uppercase;
-    border: none;
-    background-color: transparent;
     margin: 0;
     padding: 0;
+    // for scaling the text
     will-change: transform;
     font-size: var(--spacing-md);
     transform-origin: center left;
-
-    &:focus {
-      outline: none;
-    }
   }
 
   &__information {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    margin-top: var(--spacing-md);
 
     &.hide {
       display: none;
     }
+  }
+
+  &__textWrapper {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // link to website
+  &__url {
+    font-family: "Habitas-Medium";
+    text-transform: uppercase;
+    font-size: var(--spacing-sm);
+    margin-top: var(--spacing-base);
+    letter-spacing: var(--letter-spacing-lg);
+    align-self: flex-start;
+    padding: var(--spacing-base) var(--spacing-md);
+    border-radius: 71% 29% 78% 22% / 35% 58% 42% 65%;
+    border-style: solid;
+    border-width: var(--spacing-xs);
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+    transition: all 0.25s;
+
+    &:hover {
+      border-radius: 29% 71% 33% 67% / 80% 42% 58% 20% ;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
