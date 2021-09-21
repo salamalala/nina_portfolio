@@ -5,24 +5,30 @@
   <ul>
     {{ $.Scratch.Set "counter" 0 }}
     {{ range $.Site.Data.work }}
-      <li class="client">
+      <li class="client {{ .class}}">
 
         {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
 
         <button type="button" name="button" aria-expanded="false"
-        aria-controls='section_{{$.Scratch.Get "counter"}}' data-index-number='{{$.Scratch.Get "counter"}}' class="client__button">{{ .title }}</button>
+        aria-controls='section_{{$.Scratch.Get "counter"}}' data-index-number='{{$.Scratch.Get "counter"}}' class="client__button">
+          <span class="client__buttonText">
+          {{ .title }}
+            <span class="client__button--plus">+</span>
+          </span>
+        </button>
 
         <div class="client__information hide" id='section_{{$.Scratch.Get "counter"}}'>
 
           <div class="client__textWrapper">
             <p class="client__work"> {{ .work }} </p>
-            <a class="client__url" href="{{ .url }}" target_="blank" >View Website</a>
-          </div>
 
-          <div class="video client__video">
-            <div class="video__wrapper">
-              <iframe src="https://player.vimeo.com/video/{{ .video }}?title=0&byline=0&portrait=0&transparent=0&muted=1&loop=1&autopause=0&autoplay=1" width="640" height="480" frameborder="0" title="{{ .title }}" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true" allow="autoplay"></iframe>
+            <div class="client__video video">
+              <div class="video__wrapper">
+                <iframe src="https://player.vimeo.com/video/{{ .video }}?title=0&byline=0&portrait=0&transparent=0&muted=1&loop=1&autopause=0&autoplay=1" width="640" height="480" frameborder="0" title="{{ .title }}" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true" allow="autoplay"></iframe>
+              </div>
             </div>
+
+            <a class="client__link" href="{{ .url }}" target_="blank" >View Website</a>
           </div>
         </div>
 

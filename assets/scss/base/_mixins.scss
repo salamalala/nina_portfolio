@@ -1,0 +1,30 @@
+@mixin container($sides) {
+	@if $sides == left {
+    padding-left: 5vw;
+    @media #{$screen-lg} {
+      padding-left: 8vw;
+		}
+		@media #{$screen-xxl} {
+      padding-left: calc((100vw - 1400px)/2);
+		}
+	} @else if $sides == right {
+      padding-right: 5vw;
+		@media #{$screen-lg} {
+      padding-right: 8vw;
+		}
+    @media #{$screen-xxl} {
+      padding-right: calc((100vw - 1400px)/2);
+		}
+	} @else if $sides == both {
+      padding-right: 5vw;
+      padding-left: 5vw;
+      @media #{$screen-lg} {
+        padding-right: 8vw;
+        padding-left: 8vw;
+      }
+			@media #{$screen-xxl} {
+        padding-right: calc((100vw - 1400px)/2);
+        padding-left: calc((100vw - 1400px)/2);
+      }
+  }
+}

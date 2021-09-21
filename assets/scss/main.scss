@@ -4,7 +4,10 @@
 @import "fonts/habitas-medium.scss";
 
 @import "base/variables.scss";
+@import "base/html.scss";
 @import "base/typography.scss";
+@import "base/mixins.scss";
+
 
 @import "partials/header.scss";
 @import "partials/nav.scss";
@@ -20,28 +23,3 @@
 
 @import "partials/pointer.scss";
 @import "partials/scrollbar.scss";
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-system-ui);
-  font-family: neuzeit-grotesk, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  cursor: none;
-  // pointer-events: none;
-  padding: var(--spacing-base);
-}
-
-a, button {
-  cursor: none;
-}

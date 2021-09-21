@@ -1,16 +1,17 @@
 .client {
   // in order to have video positioned absolute;
   position: relative;
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
   background-color: var(--white);
   color: var(--black);
   border: solid 2px var(--black);
-  padding: var(--spacing-base) var(--spacing-md);
   transition: 0.2s all;
 
   &.active {
     padding-bottom: var(--spacing-md);
 
-    &:first-child {
+    &.musicdirectory {
       background-color: #3535FF;
       color: var(--white);
 
@@ -19,11 +20,15 @@
       }
     }
 
-    &:nth-child(2) {
+    &.petition {
       background-color: #A4A03F;
     }
 
-    &:nth-child(3) {
+    &.glaslabor {
+      background-color: #FA6016;
+    }
+
+    &.menschenhandel {
       background-color: #208776;
       color: var(--white);
 
@@ -32,27 +37,27 @@
       }
     }
 
-    &:nth-child(4) {
+    &.helvetiarockt {
       background-color: #DDE300;
     }
 
-    &:nth-child(5) {
+    &.konzerninitiative {
       background-color: #E95C22;
     }
 
-    &:nth-child(6) {
+    &.femalemusiclab {
       background-color: #BDD24F;
     }
 
-    &:nth-child(7) {
+    &.genossenschaft {
       background-color: #71C0B9;
     }
 
-    &:nth-child(8) {
+    &.sanspapierszuerich {
       background-color: #83A774;
     }
 
-    &:nth-child(9) {
+    &.gsoa {
       background-color: #BA0C2F;
       color: var(--white);
 
@@ -61,7 +66,7 @@
       }
     }
 
-    &:nth-child(10) {
+    &.wide {
       background-color: #3A86A2;
       color: var(--white);
 
@@ -73,14 +78,28 @@
 
   // title
   &__button {
+    display: block;
+    @include container(both);
+    width: 100%;
     font-family: "Habitas-Medium";
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    @media #{$screen-md} {
+
+      .active & {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__buttonText {
+    display: inline-block;
+    font-size: var(--spacing-md);
     // for scaling the text
     will-change: transform;
-    font-size: var(--spacing-md);
-    transform-origin: center left;
+    transform-origin: center;
   }
 
   &__information {
@@ -92,20 +111,25 @@
   }
 
   &__textWrapper {
-    max-width: 600px;
+    @include container(both);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+
+    @media #{$screen-md} {
+      width: 50%;
+      @include container(left);
+    }
   }
 
-  // link to website
-  &__url {
+  // link to website incl fluid hover
+  &__link {
     font-family: "Habitas-Medium";
     text-transform: uppercase;
     font-size: var(--spacing-sm);
     margin-top: var(--spacing-base);
     letter-spacing: var(--letter-spacing-lg);
-    align-self: flex-start;
     padding: var(--spacing-base) var(--spacing-md);
     border-radius: 71% 29% 78% 22% / 35% 58% 42% 65%;
     border-style: solid;
@@ -114,6 +138,12 @@
     border-color: var(--black);
     color: var(--white);
     transition: all 0.25s;
+    width: 80%;
+    text-align: center;
+
+    @media #{$screen-md} {
+      align-self: flex-start;
+    }
 
     &:hover {
       border-radius: 29% 71% 33% 67% / 80% 42% 58% 20% ;
@@ -121,9 +151,28 @@
   }
 
   &__video {
-    position: absolute;
-    right: var(--spacing-md);
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+
+    @media #{$screen-md} {
+      margin-top: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5vw;
+      left: auto;
+    }
+    @media #{$screen-xxl} {
+      right: calc((100vw - 1400px)/2);
+    }
+    @media #{$screen-lg} {
+      right: 8vw;
+    }
+    @media #{$screen-xxl} {
+      right: calc((100vw - 1400px)/2);
+    }
   }
 }

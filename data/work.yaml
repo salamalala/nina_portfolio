@@ -1,49 +1,65 @@
 - title: Music Directory
-  work: Concept |  Design in collaboration with Moana Bischof & Julia Weiss | Development
+  class: musicdirectory
+  work: Concept • Development • Design in collaboration with Moana Bischof & Julia Weiss
   video: 521342048
   url: https://musicdirectory.ch
 
 - title: Template for Petition
-  work: Concept |  Design | Development
+  class: petition
+  work: Concept • Design • Development
+  video: 523812106
+  url: https://stimmrechtfueralle.ch/
+
+- title: Glaslabor
+  class: glaslabor
+  work: Development • Design by Sabine Affolter
   video: 523812106
   url: https://stimmrechtfueralle.ch/
 
 - title: Plattform Menschenhandel
-  work: Concept | Development - Design by Moana Bischof
+  class: menschenhandel
+  work: Concept • Development • Design by Moana Bischof
   video: 522330466
   url: https://plattform-menschenhandel.ch/
 
 - title: Helvetiarockt
-  work: Concept | Development - Design by Moana Bischof & Julia Weiss
+  class: helvetiarockt
+  work: Concept • Development • Design by Moana Bischof & Julia Weiss
   video: 521342048
   url: https://helvetiarock.ch
 
 - title: Konzerninitiative
-  work: Concept | Design | Development - in collaboration with Webkinder
+  class: konzerninitiative
+  work: Concept • Design • Development - in collaboration with Webkinder
   video: 521342048
   url: https://konzern-initiative.ch
 
 - title: Female Music Lab
-  work: Concept | Development - Design by Moana Bischof & Julia Weiss
+  class: femalemusiclab
+  work: Concept • Development • Design by Moana Bischof & Julia Weiss
   video: 521342048
   url: https://femalemusiclab.ch/
 
 - title: Hauptstadt Genossenschaft
-  work: Concept | Design | Development
+  class: genossenschaft
+  work: Concept • Design • Development
   video: 521342048
   url: https://hauptstadt-genossenschaft.ch
 
 - title: Sanspapiers Anlaufstelle Zürich
-  work: Concept | Design | Development
+  class: sanspapierszuerich
+  work: Concept • Design • Development
   video: 521342048
   url: https://sans-papiers-zuerich.ch/
 
 - title: Gsoa
-  work: Concept | Design | Development
+  class: gsoa
+  work: Concept • Design • Development
   video: 521342048
   url: https://www.gsoa.ch/
 
 - title: Wide Switzerland
-  work: Concept | Design | Development
+  class: wide
+  work: Concept • Design • Development
   video: 521342048
   url: https://wide-switzerland.ch/

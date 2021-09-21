@@ -1,0 +1,79 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-system-ui);
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: none;
+  // pointer-events: none;
+  padding: var(--spacing-base);
+
+  // breakpoint box
+  &:before {
+    content: var(--bp, 'smaller than xs');
+    position: fixed;
+    z-index: 99;
+    bottom: 1em;
+    right: 1em;
+    color: white;
+    background-color: var(--bp-color);
+    padding: .5em;
+  }
+}
+
+//breakpoint variables
+@media #{$screen-xs} {
+  :root {
+    --bp: 'screen-xs';
+    --bp-color: purple;
+  }
+}
+
+@media #{$screen-sm}  {
+  :root {
+    --bp: 'screen-sm';
+    --bp-color: purple;
+  }
+}
+
+@media #{$screen-md} {
+  :root {
+    --bp: 'screen-md';
+    --bp-color: purple;
+  }
+}
+
+
+@media #{$screen-lg} {
+  :root {
+    --bp: 'screen-lg';
+    --bp-color: purple;
+  }
+}
+
+@media #{$screen-xl} {
+  :root {
+    --bp: 'screen-xl';
+    --bp-color: purple;
+  }
+}
+
+@media #{$screen-xxl} {
+  :root {
+    --bp: 'screen-xxl';
+    --bp-color: purple;
+  }
+}
+
+a, button {
+  cursor: none;
+}

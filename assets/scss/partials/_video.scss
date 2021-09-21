@@ -1,9 +1,18 @@
 .video {
   border: solid black 4px;
-  padding-bottom: 15.25%;
+  padding-bottom: 48%;
   height: 0;
-  width: 30%;
+  width: 100%;
   overflow: hidden;
+
+  @media #{$screen-sm} {
+    width: 80%;
+  }
+
+  @media #{$screen-md} {
+    padding-bottom: 15.25%;
+    width: 30%;
+  }
 
 
   &__wrapper {
