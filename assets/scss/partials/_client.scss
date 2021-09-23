@@ -2,7 +2,53 @@
   background-color: var(--white);
   color: var(--black);
   border: solid 2px var(--black);
-  transition: 0.2s all;
+  transition: 0.4s all;
+
+  &:hover {
+    &.musicdirectory {
+      background-color: #3535FF;
+    }
+
+    &.petition {
+      background-color: #A4A03F;
+    }
+
+    &.glaslabor {
+      background-color: #FA6016;
+    }
+
+    &.menschenhandel {
+      background-color: #208776;
+    }
+
+    &.helvetiarockt {
+      background-color: #DDE300;
+    }
+
+    &.konzerninitiative {
+      background-color: #E95C22;
+    }
+
+    &.femalemusiclab {
+      background-color: #BDD24F;
+    }
+
+    &.genossenschaft {
+      background-color: #71C0B9;
+    }
+
+    &.sanspapierszuerich {
+      background-color: #83A774;
+    }
+
+    &.gsoa {
+      background-color: #BA0C2F;
+    }
+
+    &.wide {
+      background-color: #3A86A2;
+    }
+  }
 
   &.active {
     padding-bottom: var(--spacing-md);
@@ -127,7 +173,7 @@
 
   &__content {
     @include container(both);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-xl);
 
     &.hide {
       display: none;
@@ -164,7 +210,7 @@
     border-color: var(--black);
     color: var(--white);
     transition: all 0.25s;
-    width: 80%;
+    width: 65%;
     text-align: center;
 
     @media #{$screen-md} {

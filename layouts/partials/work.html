@@ -9,7 +9,7 @@
 
         {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
 
-        <button type="button" name="button" aria-expanded="false"
+        <button type="button" name="button" aria-expanded="false" data-index-number="{{$.Scratch.Get "counter"}}"
         aria-controls='section_{{$.Scratch.Get "counter"}}' class="client__button" id="button_{{$.Scratch.Get "counter"}}">
           <span class="client__buttonText">
           {{ .title }}
