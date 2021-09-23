@@ -17,17 +17,21 @@ body {
   // pointer-events: none;
   padding: var(--spacing-base);
 
-  // breakpoint box
-  &:before {
-    content: var(--bp, 'smaller than xs');
-    position: fixed;
-    z-index: 99;
-    bottom: 1em;
-    right: 1em;
-    color: white;
-    background-color: var(--bp-color);
-    padding: .5em;
+  @media #{$screen-xl} {
+    padding: var(--spacing-lg);
   }
+
+  // breakpoint box
+  // &:before {
+  //   content: var(--bp, 'smaller than xs');
+  //   position: fixed;
+  //   z-index: 99;
+  //   bottom: 1em;
+  //   right: 1em;
+  //   color: white;
+  //   background-color: var(--bp-color);
+  //   padding: .5em;
+  // }
 }
 
 //breakpoint variables

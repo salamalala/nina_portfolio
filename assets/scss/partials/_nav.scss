@@ -1,6 +1,14 @@
 .nav {
   font-family: "Habitas-Medium";
+  font-size: var(--spacing-sm);
   display: flex;
+  transition: all 0.2s;
+
+  &:hover {
+    .nav__link {
+      color: var(--dark-grey);
+    }
+  }
 
   &__item {
     text-transform: uppercase;
@@ -14,6 +22,14 @@
   }
 
   &__link {
+    margin-top: calc((var(--spacing-sm) / -1 );
     padding: var(--spacing-sm);
+    color: var(--white);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--white) !important;
+      transform: scale(1.1);
+    }
   }
 }

@@ -1,10 +1,27 @@
 .about {
+  @include container(both);
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 60vw;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 80vh;
+
+  &__item {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0.1em;
+    left: -2em;
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+  }
+
+  &__love {
+    width: var(--spacing-base);
+    height: var(--spacing-base);
+    margin-bottom: -0.2em;
+  }
 }
