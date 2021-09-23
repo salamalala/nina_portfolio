@@ -21,21 +21,23 @@ $screen-xxl: "(min-width: 112.5em)";
   --black: #000;
   --white: #fff;
 
+  --lila: #B5A5C9;
+
   --ratio: 1.125;
 
   @media #{$screen-md} {
-    --ratio: 1.25;
+    --ratio: 1.333;
   }
 
   --base-size: 1em;
 
-  --spacing-xs: calc( var(--base-size) / (2 * var(--ratio) ) );
+  --spacing-xs: calc(var(--spacing-sm) / var(--ratio));
   --spacing-sm: calc( var(--base-size) / var(--ratio) );
   --spacing-base: var(--base-size);
-  --spacing-md: calc( var(--base-size) * (2 * var(--ratio) ) );
-  --spacing-lg: calc( var(--base-size) * (3 * var(--ratio) ) );
-  --spacing-xl: calc( var(--base-size) * (4 * var(--ratio) ) );
-  --spacing-xxl: calc( var(--base-size) * (45* var(--ratio) ) );
+  --spacing-md: calc( var(--base-size) * var(--ratio) );
+  --spacing-lg: calc( var(--spacing-md) * var(--ratio) );
+  --spacing-xl: calc( var(--spacing-lg) * var(--ratio) );
+  --spacing-xxl: calc( var(--spacing-xl) * var(--ratio) );
 
   --letter-spacing-base: 0.02em;
   --letter-spacing-lg: 0.1em;

@@ -1,8 +1,4 @@
 .client {
-  // in order to have video positioned absolute;
-  position: relative;
-  padding-top: var(--spacing-xs);
-  padding-bottom: var(--spacing-xs);
   background-color: var(--white);
   color: var(--black);
   border: solid 2px var(--black);
@@ -78,31 +74,36 @@
 
   // title
   &__button {
+    position: relative;
     display: block;
-    @include container(both);
     width: 100%;
     font-family: "Habitas-Medium";
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-
-    @media #{$screen-md} {
-
-      .active & {
-        justify-content: flex-start;
-      }
-    }
   }
 
   &__buttonText {
+    position: relative;
     display: inline-block;
-    font-size: var(--spacing-md);
+    font-size: var(--spacing-lg);
     // for scaling the text
     will-change: transform;
     transform-origin: center;
   }
 
-  &__information {
+  &__button--plus {
+    position: absolute;
+  }
+
+  &__button--close {
+    position: absolute;
+    right: var(--spacing-sm);
+    top: var(--spacing-sm);
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+  }
+
+  &__content {
+    @include container(both);
     margin-top: var(--spacing-md);
 
     &.hide {
@@ -111,26 +112,28 @@
   }
 
   &__textWrapper {
-    @include container(both);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  }
 
-    @media #{$screen-md} {
-      width: 50%;
-      @include container(left);
-    }
+  &__work {
+    font-size: var(--spacing-sm);
+    text-transform: uppercase;
+    font-family: "Habitas-Medium";
+  }
+
+  &__about {
+    margin-top: var(--spacing-xs);
   }
 
   // link to website incl fluid hover
   &__link {
+    margin-top: var(--spacing-base);
+    padding: var(--spacing-base) var(--spacing-md);
     font-family: "Habitas-Medium";
     text-transform: uppercase;
     font-size: var(--spacing-sm);
-    margin-top: var(--spacing-base);
     letter-spacing: var(--letter-spacing-lg);
-    padding: var(--spacing-base) var(--spacing-md);
     border-radius: 71% 29% 78% 22% / 35% 58% 42% 65%;
     border-style: solid;
     border-width: var(--spacing-xs);
@@ -142,7 +145,7 @@
     text-align: center;
 
     @media #{$screen-md} {
-      align-self: flex-start;
+      align-self: center;
     }
 
     &:hover {
@@ -156,23 +159,5 @@
     margin-right: auto;
     margin-top: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
-
-    @media #{$screen-md} {
-      margin-top: auto;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 5vw;
-      left: auto;
-    }
-    @media #{$screen-xxl} {
-      right: calc((100vw - 1400px)/2);
-    }
-    @media #{$screen-lg} {
-      right: 8vw;
-    }
-    @media #{$screen-xxl} {
-      right: calc((100vw - 1400px)/2);
-    }
   }
 }

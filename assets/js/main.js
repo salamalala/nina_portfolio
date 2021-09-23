@@ -23,7 +23,7 @@ var clientAccordion = function() {
 
     const expanded = clientButton.getAttribute('aria-expanded');
     const number = clientButton.dataset.indexNumber;
-    let associatedSection = client.querySelector('.client__information');
+    let associatedSection = client.querySelector('.client__content');
     const text = associatedSection.querySelector('.client__textWrapper');
     let plus = client.querySelector('.client__button--plus');
 
@@ -34,14 +34,14 @@ var clientAccordion = function() {
         if (client !== e.target.parentNode) {
           let clientButton = client.querySelector('.client__button');
           let clientButtonText = client.querySelector('.client__buttonText');
-          let associatedSection = client.querySelector('.client__information');
+          let associatedSection = client.querySelector('.client__content');
           let plus = client.querySelector('.client__button--plus');
 
           client.classList.remove('active');
 
           clientButton.setAttribute('aria-expanded', false);
           gsap.to(clientButtonText, {scale: 0.6, duration: 0.2, y: 0});
-          gsap.set(plus, {opacity: 1});
+          gsap.set(plus, {opacity: 1, display: "inline-block"});
           associatedSection.classList.add("hide");
         }
       })
@@ -49,11 +49,11 @@ var clientAccordion = function() {
       // give the clicked one the class active
       client.classList.toggle('active');
 
-      // if active do this, else do this
+      // if active do this,  else (if not active)
       if (client.classList.contains('active')) {
         gsap.to(clientButtonText, {scale: 1, duration: 0.2, y: 30});
         gsap.fromTo(text, {opacity: 0}, {opacity: 1, duration: 0.5});
-        gsap.to(plus, {opacity: 0, duration: 0.2});
+        gsap.to(plus, {opacity: 0, display: "none", duration: 0.2});
 
         clientButton.setAttribute('aria-expanded', true);
 
@@ -61,7 +61,7 @@ var clientAccordion = function() {
 
 
       } else {
-        gsap.set(plus, {opacity: 1, duration: 0.2});
+        gsap.set(plus, {opacity: 1, display: "inline-block", duration: 0.2});
         clientButton.setAttribute('aria-expanded', false);
         gsap.to(clientButtonText, {scale: 0.6, duration: 0.2, y: 0});
         associatedSection.classList.add("hide");
