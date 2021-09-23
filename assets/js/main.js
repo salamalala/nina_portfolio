@@ -18,20 +18,19 @@ var clientAccordion = function() {
 
     let clientButton = client.querySelector('.client__button');
     let clientButtonText = client.querySelector('.client__buttonText');
-
-    gsap.set(clientButtonText, {scale: 0.6});
-
     const expanded = clientButton.getAttribute('aria-expanded');
-    const number = clientButton.dataset.indexNumber;
     let associatedSection = client.querySelector('.client__content');
     const text = associatedSection.querySelector('.client__textWrapper');
     let plus = client.querySelector('.client__button--plus');
 
+    gsap.set(clientButtonText, {scale: 0.6});
+
+
     clientButton.addEventListener('click', (e) => {
 
-      // remove active and reset all the other client elements
+      // remove active and reset all the other client elements -> e.currentTarget.parentNode is the parent of the button -> client
       clients.forEach(client => {
-        if (client !== e.target.parentNode) {
+        if (client !== e.currentTarget.parentNode) {
           let clientButton = client.querySelector('.client__button');
           let clientButtonText = client.querySelector('.client__buttonText');
           let associatedSection = client.querySelector('.client__content');
@@ -51,6 +50,9 @@ var clientAccordion = function() {
 
       // if active do this,  else (if not active)
       if (client.classList.contains('active')) {
+
+        console.log("hello");
+
         gsap.to(clientButtonText, {scale: 1, duration: 0.2, y: 30});
         gsap.fromTo(text, {opacity: 0}, {opacity: 1, duration: 0.5});
         gsap.to(plus, {opacity: 0, display: "none", duration: 0.2});
@@ -61,6 +63,8 @@ var clientAccordion = function() {
 
 
       } else {
+
+        console.log("bye");
         gsap.set(plus, {opacity: 1, display: "inline-block", duration: 0.2});
         clientButton.setAttribute('aria-expanded', false);
         gsap.to(clientButtonText, {scale: 0.6, duration: 0.2, y: 0});

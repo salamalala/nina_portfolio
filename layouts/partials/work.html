@@ -10,22 +10,19 @@
         {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
 
         <button type="button" name="button" aria-expanded="false"
-        aria-controls='section_{{$.Scratch.Get "counter"}}' data-index-number='{{$.Scratch.Get "counter"}}' class="client__button">
+        aria-controls='section_{{$.Scratch.Get "counter"}}' class="client__button" id="button_{{$.Scratch.Get "counter"}}">
           <span class="client__buttonText">
           {{ .title }}
             <span class="client__button--plus">+</span>
           </span>
           <span class="client__button--close">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-              <g fill="#FFF" fill-rule="nonzero">
-                <path d="M24 21 45 0l3 3-21 21 21 21-3 3-21-21L3 48l-3-3 21-21L0 3l3-3z"/>
-                <path d="M24 21 45 0l3 3-21 21 21 21-3 3-21-21L3 48l-3-3 21-21L0 3l3-3z"/>
-              </g>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+              <path d="M6.08 55.58 28 33.66l21.92 21.92 5.66-5.66L33.66 28 55.58 6.08 49.92.42 28 22.34 6.08.42.42 6.08 22.34 28 .42 49.92z" fill="#000" fill-rule="nonzero"/>
             </svg>
           </span>
         </button>
 
-        <div class="client__content hide" id='section_{{$.Scratch.Get "counter"}}'>
+        <section class="client__content hide" id='section_{{$.Scratch.Get "counter"}}' aria-labelledby="button_{{$.Scratch.Get "counter"}}">
 
           <div class="client__video video">
             <div class="video__wrapper">
@@ -41,7 +38,7 @@
 
             <a class="client__link" href="{{ .url }}" target_="blank" >View Website</a>
           </div>
-        </div>
+        </section>
 
       </li>
     {{ end }}
