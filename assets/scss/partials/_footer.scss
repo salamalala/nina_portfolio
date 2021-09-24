@@ -1,8 +1,33 @@
 .footer {
-  text-align: right;
-  font-size: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
 
   p,a {
+    font-size: var(--spacing-sm);
     margin-bottom: 0;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social {
+    padding-top: var(--spacing-md);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+
+  &__socialLink {
+    height: var(--spacing-base);
+    width: var(--spacing-base);
+    display: flex;
+  }
+
+  &__svg {
+    height: 100%;
+    width: 100%;
   }
 }

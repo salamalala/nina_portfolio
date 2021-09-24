@@ -1,7 +1,7 @@
 .contact {
   display: flex;
   flex-direction: column;
-  min-height: 85vh;
+  min-height: 80vh;
   justify-content: center;
 
   &__msg {
@@ -13,36 +13,59 @@
   }
 
   &__email {
+    letter-spacing: var(--letter-spacing-md);
+    font-family: "Habitas-Medium";
+    align-self: center;
     font-size: 2vw;
     display: block;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0.1s ease-in;
+    height: var(--spacing-xl);
+    width: 25%;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+
 
     &:hover {
-      color: var(--blue);
-      transform: scale(1.1);
+      width: 100%;
+      background: var(--white);
+      display: flex;
+      color: var(--black);
+      transform: scale(2);
+
+      .contact__emailWrapper {
+        width: 200%;
+        height: 100%;
+        animation: marquee 20s linear infinite;
+      }
+
+      .contact__emailSpan {
+        width: 25%;
+        -webkit-text-stroke: 1px var(--blue);
+        color: var(--white);
+      }
     }
   }
 
-  &__socials {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__social {
-    padding-top: var(--spacing-md);
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
-  }
-
-  &__socialLink {
-    height: var(--spacing-base);
-    width: var(--spacing-base);
-    display: flex;
-  }
-
-  &__svg {
-    height: 100%;
+  &__emailSpan {
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+    display: inline-block;
+    float: left;
     width: 100%;
   }
+
+  &__emailWrapper {
+    top: 10%;
+    position: absolute;
+    overflow: hidden;
+  }
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }

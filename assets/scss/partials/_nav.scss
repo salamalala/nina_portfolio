@@ -25,11 +25,11 @@
     margin-top: calc((var(--spacing-sm) / -1 );
     padding: var(--spacing-sm);
     color: var(--white);
-    transition: all 0.2s;
+    transition: all 0.1s;
 
     &:hover {
-      color: var(--white) !important;
-      transform: scale(1.1);
+      color: var(--white)!important ;
+      transform: scale(1.2);
     }
   }
 }

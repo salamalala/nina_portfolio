@@ -147,7 +147,7 @@
   &__buttonText {
     position: relative;
     display: inline-block;
-    font-size: var(--spacing-xl);
+    font-size: var(--spacing-lg);
     // for scaling the text
     will-change: transform;
     transform-origin: center;
@@ -174,7 +174,7 @@
 
   &__content {
     @include container(both);
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
 
     &.hide {
       display: none;
@@ -190,16 +190,22 @@
     font-size: var(--spacing-sm);
     text-transform: uppercase;
     font-family: "Habitas-Medium";
+    letter-spacing: var(--letter-spacing-md);
+  }
+
+  &__about,
+  &__tech {
+    font-weight: 400;
   }
 
   &__about {
-    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
   }
 
   // link to website incl fluid hover
   &__link {
     margin-top: var(--spacing-base);
-    padding: var(--spacing-base) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-xl);
     font-family: "Habitas-Medium";
     text-transform: uppercase;
     font-size: var(--spacing-sm);
@@ -211,12 +217,7 @@
     border-color: var(--black);
     color: var(--white);
     transition: all 0.4s;
-    width: 65%;
     text-align: center;
-
-    @media #{$screen-md} {
-      align-self: center;
-    }
 
     &:hover {
       border-radius: 29% 71% 33% 67% / 80% 42% 58% 20% ;
@@ -227,7 +228,6 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-base);
   }
 }

@@ -24,7 +24,7 @@ var clientAccordion = function() {
     const text = associatedSection.querySelector('.client__textWrapper');
     let plus = client.querySelector('.client__button--plus');
 
-    gsap.set(clientButtonText, {scale: 0.6});
+    gsap.set(clientButtonText, {scale: 0.75});
 
 
     clientButton.addEventListener('click', (e) => {
@@ -40,7 +40,7 @@ var clientAccordion = function() {
           client.classList.remove('active');
 
           clientButton.setAttribute('aria-expanded', false);
-          gsap.to(clientButtonText, {scale: 0.6, duration: 0.2, y: 0});
+          gsap.to(clientButtonText, {scale: 0.75, duration: 0.2, y: 0});
           gsap.set(plus, {opacity: 1, display: "inline-block"});
           associatedSection.classList.add("hide");
         }
@@ -52,7 +52,7 @@ var clientAccordion = function() {
       // if active do this,  else (if not active)
       if (client.classList.contains('active')) {
         gsap.to(window, 0.1, {scrollTo:"#button_" + number})
-        gsap.to(clientButtonText, {scale: 1, duration: 0.2, y: 30});
+        gsap.to(clientButtonText, {scale: 1, duration: 0.2, y: 24});
         gsap.fromTo(text, {opacity: 0}, {opacity: 1, duration: 0.5});
         gsap.to(plus, {opacity: 0, display: "none", duration: 0.2});
         clientButton.setAttribute('aria-expanded', true);
@@ -61,7 +61,7 @@ var clientAccordion = function() {
       } else {
         gsap.set(plus, {opacity: 1, display: "inline-block", duration: 0.2});
         clientButton.setAttribute('aria-expanded', false);
-        gsap.to(clientButtonText, {scale: 0.6, duration: 0.2, y: 0});
+        gsap.to(clientButtonText, {scale: 0.75, duration: 0.2, y: 0});
         associatedSection.classList.add("hide");
       }
 

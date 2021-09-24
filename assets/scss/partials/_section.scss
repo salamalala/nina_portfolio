@@ -5,6 +5,10 @@
     text-align: right;
     text-transform: uppercase;
     margin-bottom: var(--spacing-xs);
-    padding-top: var(--spacing-lg);
+    padding-top: var(--spacing-base);
+    margin-top: var(--spacing-sm);
+    -webkit-text-stroke: 2px var(--white);
+    color: var(--black);
+    font-size: var(--spacing-lg);
   }
 }

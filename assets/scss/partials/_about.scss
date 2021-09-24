@@ -1,7 +1,6 @@
 .about {
   @include container(both);
   min-height: 100vh;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,15 +8,85 @@
 
   &__item {
     position: relative;
+    margin-bottom: var(--spacing-md);
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 15%;
+      height: 2px;
+      background-color: var(--dark-grey);
+      top: 0.6em;
+      left: -18%;
+    }
+
+    &:first-child {
+      &:hover {
+        &:before {
+          background-color: var(--blue);
+        }
+
+        svg path {
+          fill: var(--blue);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:hover {
+        &:before {
+          background-color: var(--pink);
+        }
+        svg path {
+          fill: var(--pink);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      &:hover {
+        &:before {
+          background-color: var(--lila);
+        }
+        svg g {
+          stroke: var(--lila);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      &:hover {
+        &:before {
+          background-color: var(--olive);
+        }
+        svg path {
+          fill: var(--olive);
+        }
+      }
+    }
   }
 
   &__icon {
     position: absolute;
-    top: 0.1em;
-    left: -2em;
+    top: 0;
+    left: -26%;
     width: var(--spacing-md);
     height: var(--spacing-md);
+
+    &--code,
+    &--savety,
+    &--hello {
+      path {
+        fill: var(--dark-grey);
+      }
+    }
+
+    &--help {
+      fill: var(--dark-grey);
+    }
   }
+
+
 
   &__love {
     width: var(--spacing-base);
